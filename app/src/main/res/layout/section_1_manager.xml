@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="0sp"
+    android:layout_marginRight="0sp"
+    android:orientation="vertical"
+    android:scrollbars="vertical" android:background="@color/icddrb_window_background">
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@color/icddrb_theme_color"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/cmdBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="12dp" android:background="@color/icddrb_theme_color"
+            android:src="@drawable/ic_action_back" />
+
+        <LinearLayout
+            android:id="@+id/topLayout3"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/cmdBack"
+            android:background="@color/icddrb_theme_color"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10px"
+                android:paddingRight="10px"
+                android:text="Section 2: \nটিকা সম্পর্কিত তথ্য"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+
+
+        </LinearLayout>
+
+
+        <ImageButton android:id="@+id/cmdClose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/close" />
+
+    </RelativeLayout>
+
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="always" android:isScrollContainer="true" android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="outsideInset" android:scrollbars="vertical">
+    <LinearLayout android:layout_marginLeft="10sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:id="@+id/secidno" android:layout_width="fill_parent" android:layout_height="80sp" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblidno" android:text="Idno" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtidno" android:maxLength="20" android:layout_width="200sp" android:inputType="text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineidno" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+      <!--    <LinearLayout android:id="@+id/secvdate" android:layout_width="fill_parent" android:layout_height="80sp" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblvdate" android:text="টিকা কেন্দ্র পরিদর্শনের তারিখ" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtvdate" android:maxLength="20" android:layout_width="150sp" android:inputType="text" android:layout_height="20sp" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>-->
+
+        <LinearLayout android:id="@+id/secvdate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblvdate" android:text="টিকা কেন্দ্র পরিদর্শনের তারিখ " android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtvdate" android:drawableRight="@drawable/calender" android:layout_width="160sp" android:inputType="text" android:layout_height="wrap_content" android:focusable="false" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+
+        <View android:id="@+id/linevdate" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secepisubblock" android:layout_width="fill_parent" android:layout_height="80sp" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblepisubblock" android:text="ইপিআই কেন্দ্রের নাম/ব্লক:" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" />
+            <TextView android:id="@+id/txtepisubblock"  android:layout_width="wrap_content"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp"  android:maxLines="4"  android:lines="2" android:singleLine="false" android:inputType="textMultiLine" />
+        </LinearLayout>
+        <View android:id="@+id/lineepisubblock" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq111" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111" android:text="111. সম্পূর্ণ সেশন পর্যবেক্ষণ করা হয়েছে:" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <RadioGroup android:id="@+id/rdogrpq111" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp">
+                <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoq1111" android:text="1- করা হয়েছে " android:gravity="top|bottom" />
+                <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoq1112" android:text="2- করা সম্ভব হয়নি " android:gravity="top|bottom" />
+            </RadioGroup>
+        </LinearLayout>
+        <View android:id="@+id/lineq111" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+
+
+        <LinearLayout android:id="@+id/secq112" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/lblHq112" android:text="112. সেশনের লক্ষ্যমাত্রা ও টিকাপ্রদান" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+        </LinearLayout>
+        <View android:id="@+id/lineq112" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112a" android:text="A. বিসিজি" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112a" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112a1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112a1" android:text="A1. লক্ষ্যমাত্রা (বিসিজি)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112a1" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112a1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112a2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112a2" android:text="A2. টিকা প্রদান (বিসিজি)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112a2" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112a2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq111_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/lblHq111_0" android:text="112a. পার্থক্যর কারণসমূহ:(নির্দেশনা: টিকা প্রদান লক্ষ্যমাত্রার চেয়ে কম হলেই কেবল কারণসমূহ জানতে হবে।)" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/secq111a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111a" android:text="A. শিশু অসুস্থ্" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq111a" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq111a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq111b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111b" android:text="B. শিশু বাড়ীতে নেই" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq111b" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq111b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq111c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111c" android:text="C. শিশুর অভিভাবক অন্যত্র চলে গেছে" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq111c" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq111c" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq111d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111d" android:text="D. শিশুর অভিভাবক অসুস্থ্" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq111d" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq111d" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq111e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111e" android:text="E. কারণ জানা সম্ভব হয়নি" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq111e" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq111e" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq111x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111x" android:text="X. অন্যান্য (নির্দিষ্ট করুন)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq111x" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq111x" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq111x1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111x1" android:text="X1. নির্দিষ্ট করুন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq111x1" android:maxLength="150" android:layout_width="250sp"  android:inputType="text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq111x1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <!--      <LinearLayout android:id="@+id/secq112a4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+                  <TextView android:id="@+id/Vlblq112a4" android:text="A3.বাদ পড়ার কারণসমূহ (বিসিজি)" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+                   <EditText android:id="@+id/txtq112a3" android:maxLength="150" android:layout_width="250sp"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" />
+
+              </LinearLayout>-->
+        <View android:id="@+id/lineq112a4" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112b" android:text="B. পেন্টা-১" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112b" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112b1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112b1" android:text="B1. লক্ষ্যমাত্রা (পেন্টা-১)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112b1" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112b1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112b2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112b2" android:text="B2. টিকা প্রদান (পেন্টা-১)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112b2" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112b2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+
+        <LinearLayout android:id="@+id/secq111p1_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/lblHq111p1_0" android:text="112p1. পার্থক্যর কারণসমূহ:(নির্দেশনা: টিকা প্রদান লক্ষ্যমাত্রার চেয়ে কম হলেই কেবল কারণসমূহ জানতে হবে।)" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/secq111p1a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111p1a" android:text="A. শিশু অসুস্থ্" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq111p1a" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq111p1a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq111p1b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111p1b" android:text="B. শিশু বাড়ীতে নেই" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq111p1b" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq111p1b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq111p1c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111p1c" android:text="C. শিশুর অভিভাবক অন্যত্র চলে গেছে" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq111p1c" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq111p1c" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq111p1d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111p1d" android:text="D. শিশুর অভিভাবক অসুস্থ্" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq111p1d" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq111p1d" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq111p1e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111p1e" android:text="E. কারণ জানা সম্ভব হয়নি" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq111p1e" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq111p1e" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq111p1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111p1x" android:text="X. অন্যান্য (নির্দিষ্ট করুন)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq111p1x" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq111p1x" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq111p1x1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq111p1x1" android:text="X1. নির্দিষ্ট করুন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+        <!--    <EditText android:id="@+id/txtq111p1x1" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ.1234567890 " android:inputType="textCapCharacters|text|number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+       -->     <EditText android:id="@+id/txtq111p1x1" android:maxLength="250" android:layout_width="250sp"  android:inputType="text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+
+        </LinearLayout>
+        <View android:id="@+id/lineq111p1x1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+
+        <!-- <LinearLayout android:id="@+id/secq112b3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112b3" android:text="112b3. সম্পূর্ণ সেশন পর্যবেক্ষণ করা হয়েছে:" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+             <RadioGroup android:id="@+id/rdogrpq112b3" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp">
+                 <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoq112b31" android:text="1- করা হয়েছে " android:gravity="top|bottom" />
+                 <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoq112b32" android:text="2- করা সম্ভব হয়নি " android:gravity="top|bottom" />
+             </RadioGroup>
+         </LinearLayout>
+         <View android:id="@+id/lineq112b3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+
+         <LinearLayout android:id="@+id/secq112b4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+             <TextView android:id="@+id/lblHq112b4" android:text="112b4. পার্থক্যর কারণসমূহ: \n(নির্দেশনা: কোড ১ হলে এবং লক্ষ্যমাত্রার সাথে অর্জনের পার্থক্য হলেই কেবল কারণসমূহ জানতে হবে।)" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+         </LinearLayout>
+         <LinearLayout android:id="@+id/secq112b4a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112b4a" android:text="A. শিশু অসুস্থ" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+             <CheckBox android:id="@+id/chkq112b4a" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+         </LinearLayout>
+         <View android:id="@+id/lineq112b4a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+         <LinearLayout android:id="@+id/secq112b4b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112b4b" android:text="B. শিশু বাড়ীতে নেই" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+             <CheckBox android:id="@+id/chkq112b4b" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+         </LinearLayout>
+         <View android:id="@+id/lineq112b4b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+         <LinearLayout android:id="@+id/secq112b4c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112b4c" android:text="C. শিশুর অভিভাবক অন্যত্র চলে গেছে" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+             <CheckBox android:id="@+id/chkq112b4c" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+         </LinearLayout>
+         <View android:id="@+id/lineq112b4c" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+         <LinearLayout android:id="@+id/secq112b4d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112b4d" android:text="D. শিশুর অভিভাবক অসুস্থ" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+             <CheckBox android:id="@+id/chkq112b4d" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+         </LinearLayout>
+         <View android:id="@+id/lineq112b4d" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+         <LinearLayout android:id="@+id/secq112b4e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112b4e" android:text="E. কারণ জানা সম্ভব হয়নি" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+             <CheckBox android:id="@+id/chkq112b4e" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+         </LinearLayout>
+         <View android:id="@+id/lineq112b4e" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+         <LinearLayout android:id="@+id/secq112b4x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112b4x" android:text="X. অন্যান্য (নির্দিষ্ট করুন)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+             <CheckBox android:id="@+id/chkq112b4x" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+         </LinearLayout>
+         <View android:id="@+id/lineq112b4x" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+         <LinearLayout android:id="@+id/secq112b4x1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112b4x1" android:text="X1. নির্দিষ্ট করুন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+             <EditText android:id="@+id/txtq112b4x1" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+         </LinearLayout>
+         <View android:id="@+id/lineq112b4x1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+ -->
+        <!--   <LinearLayout android:id="@+id/secq112b3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+               <TextView android:id="@+id/Vlblq112b3" android:text="B3. বাদ পড়ার কারণসমূহ (পেন্টা-১)" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+               <EditText android:id="@+id/txtq112b3" android:maxLength="150" android:layout_width="250sp"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" />
+
+           </LinearLayout>
+           <View android:id="@+id/lineq112b3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+          -->
+
+        <LinearLayout android:id="@+id/secq112c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112c" android:text="C. পেন্টা-২" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112c" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+
+        </LinearLayout>
+        <View android:id="@+id/lineq112c" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112c1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112c1" android:text="C1. লক্ষ্যমাত্রা (পেন্টা-২)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112c1" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112c1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112c2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112c2" android:text="C2. টিকা প্রদান (পেন্টা-২)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112c2" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112c2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112p2_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/lblHq112p2_0" android:text="112p2. পার্থক্যর কারণসমূহ:(নির্দেশনা: টিকা প্রদান লক্ষ্যমাত্রার চেয়ে কম হলেই কেবল কারণসমূহ জানতে হবে।)" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/secq112p2a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p2a" android:text="A. শিশু অসুস্থ্" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112p2a" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112p2a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112p2b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p2b" android:text="B. শিশু বাড়ীতে নেই" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112p2b" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112p2b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112p2c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p2c" android:text="C. শিশুর অভিভাবক অন্যত্র চলে গেছে" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112p2c" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112p2c" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112p2d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p2d" android:text="D. শিশুর অভিভাবক অসুস্থ্" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112p2d" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112p2d" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112p2e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p2e" android:text="E. কারণ জানা সম্ভব হয়নি" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112p2e" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112p2e" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112p2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p2x" android:text="X. অন্যান্য (নির্দিষ্ট করুন)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112p2x" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112p2x" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112p2x1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p2x1" android:text="X1. নির্দিষ্ট করুন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112p2x1" android:maxLength="150" android:layout_width="250sp"  android:inputType="text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112p2x1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <!-- <LinearLayout android:id="@+id/secq112c3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112c3" android:text="C3. বাদ পড়ার কারণসমূহ (পেন্টা-২)" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+             <EditText android:id="@+id/txtq112c3" android:maxLength="150" android:layout_width="250sp"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" />
+          </LinearLayout>
+        <View android:id="@+id/lineq112c3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+-->
+        <!--<LinearLayout android:id="@+id/secq112c3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112c3" android:text="112c3. সম্পূর্ণ সেশন পর্যবেক্ষণ করা হয়েছে:" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <RadioGroup android:id="@+id/rdogrpq112c3" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp">
+                <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoq112c31" android:text="1- করা হয়েছে " android:gravity="top|bottom" />
+                <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoq112c32" android:text="2- করা সম্ভব হয়নি " android:gravity="top|bottom" />
+            </RadioGroup>
+        </LinearLayout>
+        <View android:id="@+id/lineq112c3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112c4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/lblHq112c4" android:text="112c4. পার্থক্যর কারণসমূহ: \n(নির্দেশনা: কোড ১ হলে এবং লক্ষ্যমাত্রার সাথে অর্জনের পার্থক্য হলেই কেবল কারণসমূহ জানতে হবে।)" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/secq112c4a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112c4a" android:text="A. শিশু অসুস্থ" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112c4a" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112c4a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112c4b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112c4b" android:text="B. শিশু বাড়ীতে নেই" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112c4b" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112c4b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112c4c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112c4c" android:text="C. শিশুর অভিভাবক অন্যত্র চলে গেছে" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112c4c" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112c4c" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112c4d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112c4d" android:text="D. শিশুর অভিভাবক অসুস্থ" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112c4d" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112c4d" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112c4e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112c4e" android:text="E. কারণ জানা সম্ভব হয়নি" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112c4e" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112c4e" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112c4x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112c4x" android:text="X. অন্যান্য (নির্দিষ্ট করুন)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112c4x" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112c4x" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112c4x1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112c4x1" android:text="X1. নির্দিষ্ট করুন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112c4x1" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112c4x1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+-->
+
+        <LinearLayout android:id="@+id/secq112d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112d" android:text="D. পেন্টা-৩" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112d" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112d" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112d1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112d1" android:text="D1. লক্ষ্যমাত্রা (পেন্টা-৩)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112d1" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112d1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112d2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112d2" android:text="D2. টিকা প্রদান (পেন্টা-৩)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112d2" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112d2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112p3_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/lblHq112p3_0" android:text="112p3. পার্থক্যর কারণসমূহ:(নির্দেশনা: টিকা প্রদান লক্ষ্যমাত্রার চেয়ে কম হলেই কেবল কারণসমূহ জানতে হবে।)" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/secq112p3a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p3a" android:text="A. শিশু অসুস্থ্" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112p3a" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112p3a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112p3b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p3b" android:text="B. শিশু বাড়ীতে নেই" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112p3b" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112p3b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112p3c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p3c" android:text="C. শিশুর অভিভাবক অন্যত্র চলে গেছে" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112p3c" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112p3c" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112p3d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p3d" android:text="D. শিশুর অভিভাবক অসুস্থ্" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112p3d" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112p3d" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112p3e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p3e" android:text="E. কারণ জানা সম্ভব হয়নি" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112p3e" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112p3e" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112p3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p3x" android:text="X. অন্যান্য (নির্দিষ্ট করুন)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112p3x" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112p3x" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112p3x1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112p3x1" android:text="X1. নির্দিষ্ট করুন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+      <!--      <EditText android:id="@+id/txtq112p3x1" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ.1234567890 " android:inputType="textCapCharacters|text|number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+  -->          <EditText android:id="@+id/txtq112p3x1" android:maxLength="150" android:layout_width="250sp"  android:inputType="text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+
+        </LinearLayout>
+        <View android:id="@+id/lineq112p3x1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+
+        <!--  <LinearLayout android:id="@+id/secq112d3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+              <TextView android:id="@+id/Vlblq112d3" android:text="D3. বাদ পড়ার কারণসমূহ (পেন্টা-৩)" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+               <EditText android:id="@+id/txtq112d3" android:maxLength="150" android:layout_width="250sp"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" />
+
+          </LinearLayout>
+          <View android:id="@+id/lineq112d3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />-->
+      <!--  <LinearLayout android:id="@+id/secq112d3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112d3" android:text="112d3. সম্পূর্ণ সেশন পর্যবেক্ষণ করা হয়েছে:" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <RadioGroup android:id="@+id/rdogrpq112d3" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp">
+                <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoq112d31" android:text="1- করা হয়েছে " android:gravity="top|bottom" />
+                <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoq112d32" android:text="2- করা সম্ভব হয়নি " android:gravity="top|bottom" />
+            </RadioGroup>
+        </LinearLayout>
+        <View android:id="@+id/lineq112d3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112d4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/lblHq112d4" android:text="112d4. পার্থক্যর কারণসমূহ: \n(নির্দেশনা: কোড ১ হলে এবং লক্ষ্যমাত্রার সাথে অর্জনের পার্থক্য হলেই কেবল কারণসমূহ জানতে হবে।)" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/secq112d4a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112d4a" android:text="A. শিশু অসুস্থ" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112d4a" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112d4a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112d4b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112d4b" android:text="B. শিশু বাড়ীতে নেই" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112d4b" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112d4b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112d4c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112d4c" android:text="C. শিশুর অভিভাবক অন্যত্র চলে গেছে" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112d4c" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112d4c" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112d4d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112d4d" android:text="D. শিশুর অভিভাবক অসুস্থ" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112d4d" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112d4d" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112d4e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112d4e" android:text="E. কারণ জানা সম্ভব হয়নি" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112d4e" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112d4e" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112d4x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112d4x" android:text="X. অন্যান্য (নির্দিষ্ট করুন)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112d4x" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112d4x" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112d4x1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112d4x1" android:text="X1. নির্দিষ্ট করুন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112d4x1" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112d4x1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+-->
+        <LinearLayout android:id="@+id/secq112e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0" android:visibility="gone">
+            <TextView android:id="@+id/Vlblq112e" android:text="E. ওপিভি-১" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112e" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112e" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+        <LinearLayout android:id="@+id/secq112e1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112e1" android:text="E1. লক্ষ্যমাত্রা (ওপিভি-১)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112e1" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112e1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112e2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112e2" android:text="E2. টিকা প্রদান (ওপিভি-১)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112e2" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+
+        </LinearLayout>
+        <View android:id="@+id/lineq112e2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+    <!--    <LinearLayout android:id="@+id/secq112e3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112e3" android:text="E3. বাদ পড়ার কারণসমূহ (ওপিভি-1)" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112e3" android:maxLength="150" android:layout_width="250sp"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" />
+
+        </LinearLayout>
+        <View android:id="@+id/lineq112e3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        -->
+        <LinearLayout android:visibility="gone" android:id="@+id/secq112f" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112f" android:text="F. ওপিভি-২" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112f" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112f" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+        <LinearLayout android:id="@+id/secq112f1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112f1" android:text="F1. লক্ষ্যমাত্রা (ওপিভি-২)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112f1" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112f1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112f2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112f2" android:text="F2. টিকা প্রদান (ওপিভি-২)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112f2" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112f2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+    <!--    <LinearLayout android:id="@+id/secq112f3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112f3" android:text="F3. বাদ পড়ার কারণসমূহ (ওপিভি-২)" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112f3" android:maxLength="150" android:layout_width="250sp"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112f3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+       -->
+        <LinearLayout android:visibility="gone" android:id="@+id/secq112g" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112g" android:text="G. ওপিভি-৩" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112g" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:visibility="gone" android:id="@+id/lineq112g" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112g1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112g1" android:text="G1. লক্ষ্যমাত্রা (ওপিভি-৩)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112g1" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112g1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112g2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112g2" android:text="G2. টিকা প্রদান (ওপিভি-৩)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112g2" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112g2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+       <!-- <LinearLayout android:id="@+id/secq112g3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112g3" android:text="G3. বাদ পড়ার কারণসমূহ (ওপিভি-৩)" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112g3" android:maxLength="150" android:layout_width="250sp"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112g3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+       -->
+        <LinearLayout android:visibility="gone" android:id="@+id/secq112h" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112h" android:text="H.পিসিভি-১" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112h" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112h" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+        <LinearLayout android:id="@+id/secq112h1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112h1" android:text="H1. লক্ষ্যমাত্রা (পিসিভি-১)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112h1" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112h1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112h2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+           <TextView android:id="@+id/Vlblq112h2" android:text="H2. টিকা প্রদান (পিসিভি-১)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112h2" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112h2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+       <!-- <LinearLayout android:id="@+id/secq112h3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112h3" android:text="H3. বাদ পড়ার কারণসমূহ (পিসিভি-১)" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112h3" android:maxLength="150" android:layout_width="250sp"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" />
+
+        </LinearLayout>
+        <View android:id="@+id/lineq112h3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+  -->      <LinearLayout android:visibility="gone" android:id="@+id/secq112i" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112i" android:text="I.পিসিভি-২" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112i" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112i" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone" />
+        <LinearLayout android:id="@+id/secq112i1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112i1" android:text="I1. লক্ষ্যমাত্রা (পিসিভি-২)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112i1" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112i1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112i2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112i2" android:text="I2. টিকা প্রদান (পিসিভি-২)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112i2" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112i2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+       <!-- <LinearLayout android:id="@+id/secq112i3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+           <TextView android:id="@+id/Vlblq112i3" android:text="I3. বাদ পড়ার কারণসমূহ (পিসিভি-2)" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112i3" android:maxLength="150" android:layout_width="250sp"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112i3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+-->        <LinearLayout android:visibility="gone" android:id="@+id/secq112j" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112j" android:text="J.পিসিভি-৩" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112j" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112j" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone" />
+        <LinearLayout android:id="@+id/secq112j1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112j1" android:text="J1. লক্ষ্যমাত্রা (পিসিভি-৩)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112j1" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112j1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112j2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112j2" android:text="J2. টিকা প্রদান (পিসিভি-৩)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112j2" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112j2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+  <!--      <LinearLayout android:id="@+id/secq112j3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+               <TextView android:id="@+id/Vlblq112j3" android:text="J3. বাদ পড়ার কারণসমূহ (পিসিভি-৩)" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112j3" android:maxLength="150" android:layout_width="250sp"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112j3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        -->
+        <LinearLayout android:id="@+id/secq112k" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112k" android:text="K. এমআর-১" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112k" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112k" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112k1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112k1" android:text="K1. লক্ষ্যমাত্রা (এমআর-১)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112k1" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112k1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112k2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112k2" android:text="K2. টিকা প্রদান(এমআর-১)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112k2" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112k2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112m1_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/lblHq112m1_0" android:text="112m1. পার্থক্যর কারণসমূহ:(নির্দেশনা: টিকা প্রদান লক্ষ্যমাত্রার চেয়ে কম হলেই কেবল কারণসমূহ জানতে হবে।)" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/secq112m1a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112m1a" android:text="A. শিশু অসুস্থ্" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112m1a" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112m1a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112m1b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112m1b" android:text="B. শিশু বাড়ীতে নেই" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112m1b" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112m1b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112m1c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112m1c" android:text="C. শিশুর অভিভাবক অন্যত্র চলে গেছে" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112m1c" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112m1c" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112m1d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112m1d" android:text="D. শিশুর অভিভাবক অসুস্থ্" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112m1d" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112m1d" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112m1e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112m1e" android:text="E. কারণ জানা সম্ভব হয়নি" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112m1e" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112m1e" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112m1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112m1x" android:text="X. অন্যান্য (নির্দিষ্ট করুন)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112m1x" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112m1x" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112m1x1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112m1x1" android:text="X1. নির্দিষ্ট করুন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+        <!--    <EditText android:id="@+id/txtq112m1x1" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ.1234567890 " android:inputType="textCapCharacters|text|number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+     -->       <EditText android:id="@+id/txtq112m1x1" android:maxLength="150" android:layout_width="250sp"  android:inputType="text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+
+        </LinearLayout>
+        <View android:id="@+id/lineq112m1x1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+
+        <!-- <LinearLayout android:id="@+id/secq112k3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+             <TextView android:id="@+id/Vlblq112k3" android:text="K3. বাদ পড়ার কারণসমূহ (এমআর-১)" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+             <EditText android:id="@+id/txtq112k3" android:maxLength="150" android:layout_width="250sp"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" />
+         </LinearLayout>
+         <View android:id="@+id/lineq112k3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+ -->
+       <!-- <LinearLayout android:id="@+id/secq112k3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112k3" android:text="112k3. সম্পূর্ণ সেশন পর্যবেক্ষণ করা হয়েছে:" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <RadioGroup android:id="@+id/rdogrpq112k3" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="20sp">
+                <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoq112k31" android:text="1- করা হয়েছে " android:gravity="top|bottom" />
+                <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingRight="10dp" android:textSize="20sp" android:id="@+id/rdoq112k32" android:text="2- করা সম্ভব হয়নি " android:gravity="top|bottom" />
+            </RadioGroup>
+        </LinearLayout>
+        <View android:id="@+id/lineq112k3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112k4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/lblHq112k4" android:text="112k4. পার্থক্যর কারণসমূহ: \n(নির্দেশনা: কোড ১ হলে এবং লক্ষ্যমাত্রার সাথে অর্জনের পার্থক্য হলেই কেবল কারণসমূহ জানতে হবে।)" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/secq112k4a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112k4a" android:text="A. শিশু অসুস্থ" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112k4a" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112k4a" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112k4b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112k4b" android:text="B. শিশু বাড়ীতে নেই" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112k4b" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112k4b" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112k4c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112k4c" android:text="C. শিশুর অভিভাবক অন্যত্র চলে গেছে" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112k4c" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112k4c" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112k4d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112k4d" android:text="D. শিশুর অভিভাবক অসুস্থ" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112k4d" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112k4d" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112k4e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112k4e" android:text="E. কারণ জানা সম্ভব হয়নি" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112k4e" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112k4e" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112k4x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112k4x" android:text="X. অন্যান্য (নির্দিষ্ট করুন)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112k4x" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112k4x" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+        <LinearLayout android:id="@+id/secq112k4x1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112k4x1" android:text="X1. নির্দিষ্ট করুন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112k4x1" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112k4x1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+-->
+        <LinearLayout android:visibility="gone" android:id="@+id/secq112l" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112l" android:text="L. এমআর-২" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <CheckBox android:id="@+id/chkq112l" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:visibility="gone" android:id="@+id/lineq112l" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout android:id="@+id/secq112l1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112l1" android:text="L1. লক্ষ্যমাত্রা (এমআর-২)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112l1" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112l1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <LinearLayout  android:id="@+id/secq112l2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112l2" android:text="L2. টিকা প্রদান (এমআর-২)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112l2" android:maxLength="6" android:layout_width="100sp" android:inputType="number" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+        </LinearLayout>
+        <View  android:id="@+id/lineq112l2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+        <!--<LinearLayout android:id="@+id/secq112l3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq112l3" android:text="L3. বাদ পড়ার কারণসমূহ (এমআর-২)" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq112l3" android:maxLength="150" android:layout_width="250sp"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" />
+        </LinearLayout>
+        <View android:id="@+id/lineq112l3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+-->
+        <LinearLayout android:id="@+id/secq113" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0">
+            <TextView android:id="@+id/Vlblq113" android:text="113. মন্তব্য" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+            <EditText android:id="@+id/txtq113" android:maxLength="200" android:layout_width="300sp"  android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp"  android:inputType="text" />
+
+        </LinearLayout>
+
+     <View android:id="@+id/lineq113" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" />
+
+
+        <!--  <LinearLayout android:id="@+id/secq113" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+           <TextView android:id="@+id/lblHq113" android:text="q113. সমস্যা চিহ্নিত ও সমাধান" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" style="@style/rowHeading"/>
+       </LinearLayout>
+       <View android:id="@+id/lineq113" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+
+       <LinearLayout android:id="@+id/secq113ap1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0" android:visibility="gone">
+           <TextView android:id="@+id/Vlblq113ap1" android:text="A1. সমস্যা (১ম)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+           <CheckBox android:id="@+id/chkq113ap1" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+       </LinearLayout>
+       <View android:id="@+id/lineq113ap1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+
+
+       <LinearLayout android:id="@+id/secq113a1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0" android:visibility="gone">
+           <TextView android:id="@+id/Vlblq113a1" android:text="q113a1. কি সমস্যা পেয়েছেন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+           <EditText android:id="@+id/txtq113a1" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+       </LinearLayout>
+       <View android:id="@+id/lineq113a1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+       <LinearLayout android:id="@+id/secq113a2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0" android:visibility="gone">
+           <TextView android:id="@+id/Vlblq113a2" android:text="q113a2. কি সমাধান দিয়েছেন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+           <EditText android:id="@+id/txtq113a2" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+       </LinearLayout>
+       <View android:id="@+id/lineq113a2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+
+       <LinearLayout android:id="@+id/secq113ap2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0" android:visibility="gone">
+           <TextView android:id="@+id/Vlblq113ap2" android:text="A2. সমস্যা (২য়)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+           <CheckBox android:id="@+id/chkq113ap2" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+       </LinearLayout>
+       <View android:id="@+id/lineq113ap2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+
+
+
+       <LinearLayout android:id="@+id/secq113b1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0" android:visibility="gone">
+            <TextView android:id="@+id/Vlblq113b1" android:text="q113b1. কি সমস্যা পেয়েছেন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+           <EditText android:id="@+id/txtq113b1" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+       </LinearLayout>
+       <View android:id="@+id/lineq113b1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+       <LinearLayout android:id="@+id/secq113b2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0" android:visibility="gone">
+           <TextView android:id="@+id/Vlblq113b2" android:text="q113b2. কি সমাধান দিয়েছেন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+           <EditText android:id="@+id/txtq113b2" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+       </LinearLayout>
+       <View android:id="@+id/lineq113b2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+
+       <LinearLayout android:id="@+id/secq113ap3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0" android:visibility="gone">
+           <TextView android:id="@+id/Vlblq113ap3" android:text="A3. সমস্যা (৩য়)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+           <CheckBox android:id="@+id/chkq113ap3" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+       </LinearLayout>
+       <View android:id="@+id/lineq113ap3" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+
+       <LinearLayout android:id="@+id/secq113c1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0" android:visibility="gone">
+           <TextView android:id="@+id/Vlblq113c1" android:text="q113c1. কি সমস্যা পেয়েছেন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+           <EditText android:id="@+id/txtq113c1" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+       </LinearLayout>
+       <View android:id="@+id/lineq113c1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+
+
+
+       <LinearLayout android:id="@+id/secq113c2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0" android:visibility="gone">
+            <TextView android:id="@+id/Vlblq113c2" android:text="q113c2. কি সমাধান দিয়েছেন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+           <EditText android:id="@+id/txtq113c2" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+       </LinearLayout>
+
+
+       <View android:id="@+id/lineq113c2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+
+       <LinearLayout android:id="@+id/secq113ap4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0" android:visibility="gone">
+           <TextView android:id="@+id/Vlblq113ap4" android:text="A3. সমস্যা (৪র্থ)" android:layout_width="300sp" android:layout_height="wrap_content" android:textSize="20sp" />
+           <CheckBox android:id="@+id/chkq113ap4" android:layout_width="50sp" android:inputType="text" android:layout_height="wrap_content" android:layout_marginRight="10sp" android:textSize="20sp" />
+       </LinearLayout>
+       <View android:id="@+id/lineq113ap4" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+
+
+       <LinearLayout android:id="@+id/secq113d1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0" android:visibility="gone">
+             <TextView android:id="@+id/Vlblq113d1" android:text="q113d1. কি সমস্যা পেয়েছেন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+           <EditText android:id="@+id/txtq113d1" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+       </LinearLayout>
+       <View android:id="@+id/lineq113d1" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+
+
+
+       <LinearLayout android:id="@+id/secq113d2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/rowStyle0" android:visibility="gone">
+            <TextView android:id="@+id/Vlblq113d2" android:text="q113d2. কি সমাধান দিয়েছেন" android:layout_width="220sp" android:layout_height="wrap_content" android:textSize="20sp" />
+           <EditText android:id="@+id/txtq113d2" android:maxLength="150" android:layout_width="250sp" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ. " android:inputType="textCapCharacters|text" android:layout_height="wrap_content" style="@style/customEdit" android:layout_marginRight="10sp" android:textSize="20sp" />
+       </LinearLayout>
+       <View android:id="@+id/lineq113d2" android:layout_height="1dip" android:layout_width="fill_parent" android:background="#CCCCCC" android:visibility="gone"/>
+-->
+        <LinearLayout android:layout_width="fill_parent" android:paddingTop="20sp" android:layout_height="wrap_content" android:orientation="vertical">
+            <Button android:id="@+id/cmdSave" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/button_style_green"
+                android:textSize="20sp" android:text=" Save -> Continue " android:textColor="#FFFFFF" android:layout_marginBottom="20sp" android:layout_marginLeft="20sp" android:layout_marginRight="20sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

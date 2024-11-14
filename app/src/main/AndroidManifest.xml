@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.mansup"
+    android:installLocation="internalOnly"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <!--
+        <uses-sdk
+            android:minSdkVersion="16"
+            android:targetSdkVersion="17" />
+    -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" /> <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" /> -->
+    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+  <!--  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_of_icddrb"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/CustomTheme">
+
+
+        <activity
+            android:name="com.example.mansup.ipc_view_list"
+            android:label=""
+            android:theme="@style/icdrb_CustomTheme" />
+        <activity
+            android:name="com.example.mansup.childandmother_reg_view_list"
+            android:label=""
+            android:theme="@style/icdrb_CustomTheme" />
+        <activity
+            android:name="com.example.mansup.iron_gps"
+            android:label=""
+            android:theme="@style/icdrb_CustomTheme" />
+        <activity
+            android:name="com.example.mansup.Section_1_ipc_reg"
+            android:label=""
+            android:theme="@style/icdrb_CustomTheme" />
+        <activity
+            android:name="com.example.mansup.Section_1_Manager_Service"
+            android:label=""
+            android:theme="@style/icdrb_CustomTheme" />
+
+        <activity
+            android:name="com.example.mansup.SettingForm"
+            android:label="Setting" />
+
+
+        <!--
+ <application android:screenOrientation="portrait" android:allowBackup="true" android:icon="@drawable/govtlogo3" android:clearTaskOnLaunch="true" android:label="@string/app_name" android:largeHeap="true"
+             android:theme="@style/CustomTheme"
+             android:name="apps_font.CustomFontApp" android:supportsRtl="true">
+        -->
+        <!--
+  <application  android:allowBackup="true" android:icon="@drawable/govtlogo3" android:clearTaskOnLaunch="true" android:label="@string/app_name" android:largeHeap="true"
+              android:theme="@style/CustomTheme"
+              android:name="apps_font.CustomFontApp" android:supportsRtl="true">
+        --><!--<compatible-screens tools:ignore="WrongManifestParent">
+        &lt;!&ndash; all small size screens &ndash;&gt;
+        <screen android:screenSize="small" android:screenDensity="ldpi" />
+        <screen android:screenSize="small" android:screenDensity="mdpi" />
+        <screen android:screenSize="small" android:screenDensity="hdpi" />
+        <screen android:screenSize="small" android:screenDensity="xhdpi" />
+        &lt;!&ndash; all normal size screens &ndash;&gt;
+        <screen android:screenSize="normal" android:screenDensity="ldpi" />
+        <screen android:screenSize="normal" android:screenDensity="mdpi" />
+        <screen android:screenSize="normal" android:screenDensity="hdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xhdpi" />
+    </compatible-screens>-->
+        <activity
+            android:name="com.example.mansup.LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name_all"
+            android:screenOrientation="portrait"
+            android:theme="@style/icdrb_CustomTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mansup.manager_home"
+            android:theme="@style/icdrb_CustomTheme" />
+
+
+    </application>
+
+</manifest>
